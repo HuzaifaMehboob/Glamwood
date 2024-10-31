@@ -6,7 +6,7 @@ const ProductSection = ({ products }) => {
   return (
     <div className="py-10 flex flex-col items-center">
       {/* Section Title */}
-      <h2 className="text-2xl font-semibold">Our Products</h2>
+      <h2 className="text-4xl font-semibold">Our Products</h2>
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">

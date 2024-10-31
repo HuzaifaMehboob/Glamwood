@@ -4,16 +4,16 @@ import living from '../../Assets/Images/living.png'
 import bedroom from '../../Assets/Images/bedroom.png'
 const BrowseRange = () => {
   return (
-    <div className="flex flex-col items-center py-10">
+    <div className="flex flex-col items-center py-10 mt-10">
       {/* Title Section */}
-      <h2 className="text-2xl font-semibold">Browse The Range</h2>
+      <h2 className="text-4xl font-semibold">Browse The Range</h2>
       <p className="text-gray-500 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
       {/* Categories Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-8">
         {/* Dining */}
         <div className="flex flex-col items-center">
-          <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+          <div className="w-full h-[400px] bg-gray-200 rounded-lg flex items-center justify-center">
             {/* Replace with actual image source */}
             <img
               src={dining}
@@ -26,7 +26,7 @@ const BrowseRange = () => {
 
         {/* Living */}
         <div className="flex flex-col items-center">
-          <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+          <div className="w-full h-[400px] bg-gray-200 rounded-lg flex items-center justify-center">
             {/* Replace with actual image source */}
             <img
               src={living}
@@ -39,7 +39,7 @@ const BrowseRange = () => {
 
         {/* Bedroom */}
         <div className="flex flex-col items-center">
-          <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+          <div className="w-full h-[400px] bg-gray-200 rounded-lg flex items-center justify-center">
             {/* Replace with actual image source */}
             <img
               src={bedroom}
