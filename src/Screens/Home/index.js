@@ -14,7 +14,8 @@ import grifo from '../../Assets/Images/productsection/grifo.png'
 import muggo from '../../Assets/Images/productsection/muggo.png'
 import pingky from '../../Assets/Images/productsection/pingky.png'
 import potty from '../../Assets/Images/productsection/potty.png'
-import Features from "../../Components/Features";
+import WhyChooseUs from "../../Components/WhyChooseUs";
+import FurnitureGallery from "../../Components/FurnitureGallery";
 
 
 const products = [
@@ -82,9 +83,10 @@ const Homepage = () => {
     <div className="font-sans">
       <Navbar />
       <HeroSection />
-      <Features/>
+      <FurnitureGallery/>
       <CategorySection />
       <ProductSection products={products}/>
+      <WhyChooseUs/>
       <RoomInspirationSection />
       <GallerySection />
       <Footer />
