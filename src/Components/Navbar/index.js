@@ -1,33 +1,48 @@
 import React from 'react';
-import { IoIosSearch } from "react-icons/io";
-import { IoCartOutline } from "react-icons/io5";
+import { FaUser, FaHeart, FaShoppingBag, FaBars } from 'react-icons/fa';
+import { AiOutlineSearch } from 'react-icons/ai';
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <nav className="flex justify-between items-center p-4 shadow-md">
-      {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <span className="text-2xl font-bold text-yellow-600">▲</span> {/* Replace with the logo icon */}
-        <span className="text-xl font-semibold text-gray-900">Furniro</span>
-      </div>
+    <header className="flex items-center justify-between px-4 md:px-8 py-4 border-b border-gray-200 bg-white shadow-sm">
+      {/* Left Section: Logo */}
+      <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800">
+        Woodex
+      </h1>
 
-      {/* Navigation Links */}
-      <div className="hidden md:flex space-x-8 text-gray-600 font-semibold text-lg ">
-        <a href="#" className="hover:text-gray-900 ">Home</a>
-        <a href="#" className="hover:text-gray-900 ">Shop</a>
-        <a href="#" className="hover:text-gray-900 ">About</a>
-        <a href="#" className="hover:text-gray-900">Contact</a>
-      </div>
+      {/* Right Section: Icons and Search Bar */}
+      <div className="flex items-center space-x-4 md:space-x-6 text-gray-600">
+        {/* Search Icon for Small Screens */}
+        <button className="text-gray-500 block md:hidden">
+          <AiOutlineSearch className="text-xl" />
+        </button>
 
-      {/* Icons */}
-      <div className="flex space-x-4">
-        <IoIosSearch />
-        
-        <IoCartOutline/>
-        
+        {/* Full Search Bar for Medium Screens and Up */}
+        <div className="hidden md:flex relative w-48 lg:w-64">
+          <input
+            type="text"
+            placeholder="Search Anything..."
+            className="w-full px-4 py-2 text-sm text-gray-700 placeholder-gray-500 border border-gray-300 rounded-full focus:outline-none focus:border-gray-400 shadow-sm"
+          />
+          <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500">
+            <AiOutlineSearch />
+          </button>
+        </div>
+
+        {/* Icons */}
+        <FaUser className="hidden sm:block cursor-pointer text-lg md:text-xl hover:text-gray-800" />
+        <div className="relative cursor-pointer text-lg md:text-xl hover:text-gray-800">
+          <FaHeart />
+          <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 text-xs font-semibold text-white bg-brown-600 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">0</span>
+        </div>
+        <div className="relative cursor-pointer text-lg md:text-xl hover:text-gray-800">
+          <FaShoppingBag />
+          <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 text-xs font-semibold text-white bg-brown-600 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">0</span>
+        </div>
+        <FaBars className="cursor-pointer text-lg md:text-xl hover:text-gray-800" />
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;

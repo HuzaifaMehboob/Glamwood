@@ -6,7 +6,7 @@ import potty from '../../Assets/Images/productsection/potty.png';
 import office from '../../Assets/Images/office.jpg';
 import outdoor from '../../Assets/Images/outdoor.jpg';
 import livingroom from '../../Assets/Images/livingroom.jpg';
-import kitchen from '../../Assets/Images/kitchen.jpg';
+// import kitchen from '../../Assets/Images/kitchen.jpg';
 import kitchen1 from '../../Assets/Images/kitchen1.jpg';
 import bedroom from '../../Assets/Images/bedroom.jpg';
 
@@ -26,12 +26,12 @@ function FurnitureGallery() {
         Explore Our Collections
       </h2>
       
-      <div className="grid grid-cols-2 gap-4 w-8/12 max-w-screen-lg">
+      <div className="grid grid-cols-2 gap-4 w-10/12 max-w-screen-lg">
         {products.map((product) => (
           <div
             key={product.id}
             className={`bg-white rounded-lg shadow-lg text-center overflow-hidden ${
-              product.span ? "row-span-2 h-[455px]" : "h-[220px]"
+              product.span ? "row-span-2 h-[455px]" : "h-[220px] "
             }`}
           >
             <img
