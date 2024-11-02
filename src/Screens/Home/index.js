@@ -16,6 +16,7 @@ import pingky from '../../Assets/Images/productsection/pingky.png'
 import potty from '../../Assets/Images/productsection/potty.png'
 import WhyChooseUs from "../../Components/WhyChooseUs";
 import FurnitureGallery from "../../Components/FurnitureGallery";
+import SignatureCollection from "../../Components/SignatureCollection";
 
 
 const products = [
@@ -83,10 +84,11 @@ const Homepage = () => {
     <div className="font-sans">
       <Navbar />
       <HeroSection />
+      <SignatureCollection/>
       <FurnitureGallery/>
-      <CategorySection />
-      <ProductSection products={products}/>
       <WhyChooseUs/>
+      <ProductSection products={products}/>
+      
       <RoomInspirationSection />
       <GallerySection />
       <Footer />
