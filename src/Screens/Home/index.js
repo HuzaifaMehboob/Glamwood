@@ -84,11 +84,11 @@ const Homepage = () => {
     <div className="font-sans">
       <Navbar />
       <HeroSection />
-      <SignatureCollection/>
-      <FurnitureGallery/>
       <WhyChooseUs/>
-      <ProductSection products={products}/>
+      <FurnitureGallery/>
       
+      <ProductSection products={products}/>
+      <SignatureCollection/>
       <RoomInspirationSection />
       <GallerySection />
       <Footer />
