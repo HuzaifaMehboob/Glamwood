@@ -85,7 +85,7 @@ const Homepage = () => {
       <Navbar />
       <HeroSection />
       <WhyChooseUs/>
-      <FurnitureGallery/>
+      {/* <FurnitureGallery/> */}
       
       <ProductSection products={products}/>
       <SignatureCollection/>

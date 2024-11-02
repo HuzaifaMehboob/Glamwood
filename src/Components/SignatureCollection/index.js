@@ -24,11 +24,30 @@ const SignatureCollection = () => {
               className="w-full h-full object-cover" // Adjusted height here
             />
           </div>
-          <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4">
-            <h3 className="text-3xl font-bold text-gray-800">Residential</h3>
-            <p className="text-gray-500">
-              Immerse yourself in our Residential Collection, where timeless elegance meets contemporary flair. Crafted with meticulous attention to detail, our expertly designed pieces seamlessly blend form and function, creating a harmonious living environment that invites you to relax and unwind.
-            </p>
+          <div className="w-full md:w-1/2 flex flex-col justify-center space-y-8">
+            <h3 className="text-5xl font-bold text-gray-800">Modern Living Spaces</h3>
+            <p className="text-gray-500 leading-loose text-lg ">
+            Discover a curated collection of stylish, contemporary furniture that transforms your living space into a sophisticated retreat. From vibrant sofas and sleek coffee tables to chic decor, each piece is crafted to enhance both comfort and style. Explore our selection to find unique furniture that fits your vision of a perfect home.</p>
+            <button className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 mt-4 w-fit">
+              Explore Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="w-full  max-w-5xl">
+        
+        <div className="flex flex-col md:flex-row-reverse gap-8">
+          <div className="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src={hospital1}
+              alt="Residential Furniture" 
+              className="w-full h-full object-cover" // Adjusted height here
+            />
+          </div>
+          <div className="w-full md:w-1/2 flex flex-col justify-center space-y-8">
+            <h3 className="text-5xl font-bold text-gray-800">Elegant Minimalism Collection</h3>
+            <p className="text-gray-500 leading-loose text-lg">
+            Embrace the beauty of simplicity with our Elegant Minimalism Collection. Featuring refined furniture pieces like this plush mauve accent chair, complemented by a chic marble side table and a brass floor lamp, each element is designed to bring a touch of luxury to your space. Perfect for those who appreciate understated elegance, this collection merges comfort with style, making it ideal for modern and minimalist interiors. Let your space speak sophistication with thoughtfully curated pieces that elevate any room.</p>
             <button className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 mt-4 w-fit">
               Explore Now
             </button>
@@ -37,9 +56,9 @@ const SignatureCollection = () => {
       </div>
 
       {/* Hospitality Section */}
-      <div className="w-full max-w-5xl">
+      {/* <div className="w-full max-w-4xl">
         <div className="flex flex-col md:flex-row gap-8">
-          {/* Left Section with Caption and Image */}
+          {/* Left Section with Caption and Image 
           <div className="w-full md:w-1/2 flex flex-col items-center rounded-lg overflow-hidden ">
             <div className="text-left mb-8">
               <h3 className="text-5xl font-bold text-gray-800">Hospitality Designs</h3>
@@ -54,7 +73,7 @@ const SignatureCollection = () => {
             />
           </div>
 
-          {/* Right Section with Just the Image */}
+          
           <div className="w-full md:w-1/2  rounded-lg overflow-hidden">
             <img 
               src={hospital2}
@@ -64,7 +83,7 @@ const SignatureCollection = () => {
           
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

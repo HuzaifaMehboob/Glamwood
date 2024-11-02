@@ -1,61 +1,88 @@
-// RoomCarousel.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import living from '../../Assets/Images/livingroom.jpg';
+import bedroom from '../../Assets/Images/bedroom.jpg';
+import outdoor from '../../Assets/Images/outdoor.jpg';
+import office from '../../Assets/Images/office.jpg';
+import { SlArrowLeft } from "react-icons/sl";
+import { SlArrowRight } from "react-icons/sl";
 
-const RoomCarousel = ({ rooms }) => {
-  const [current, setCurrent] = useState(0);
+const Carousel = () => {
+  const slides = [
+    { id: 1, title: "Inner Peace", subtitle: "Bedroom", image: living },
+    { id: 2, title: "Modern Living", subtitle: "Living Room", image: bedroom },
+    { id: 3, title: "Cozy Workspace", subtitle: "Home Office", image: outdoor },
+    { id: 4, title: "Office Asthetics", subtitle: "Office Decor", image: office },
+  ];
 
-  const nextSlide = () => {
-    setCurrent(current === rooms.length - 1 ? 0 : current + 1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
   };
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? rooms.length - 1 : current - 1);
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   return (
-    <div className="relative w-full h-full">
-      {rooms.map((room, index) => (
+    <div className="relative w-full max-w-4xl mx-auto mt-8 p-4">
+      <div className="relative overflow-hidden h-80 rounded-lg">
+        {/* Carousel items */}
         <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-500 ${
-            index === current ? 'opacity-100' : 'opacity-0'
-          }`}
+          className="flex transition-transform duration-500"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          <img src={room.image} alt={room.title} className="w-full h-full object-cover rounded-lg" />
-          <div className="absolute bottom-6 left-6 bg-white bg-opacity-75 p-4 rounded">
-            <p className="text-sm font-semibold text-gray-600">{room.roomType}</p>
-            <h3 className="text-lg font-bold">{room.title}</h3>
-          </div>
+          {slides.map((slide) => (
+            <div
+              key={slide.id}
+              className="flex-shrink-0 w-full h-80 relative"
+            >
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white p-4">
+                <h3 className="text-2xl font-bold">{slide.title}</h3>
+                <p className="text-gray-300">{slide.subtitle}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
 
-      {/* Navigation Buttons */}
+      {/* Navigation buttons */}
       <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+        onClick={handlePrev}
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
       >
-        &#10094;
+        <SlArrowLeft/>
       </button>
       <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+        onClick={handleNext}
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 p-3 bg-gray-100 rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
       >
-        &#10095;
+        <SlArrowRight/>
       </button>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {rooms.map((_, idx) => (
-          <div
-            key={idx}
-            className={`w-2.5 h-2.5 rounded-full ${
-              idx === current ? 'bg-yellow-500' : 'bg-gray-300'
+      {/* Dots indicator */}
+      <div className="flex justify-center mt-4 space-x-2">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`h-2 w-2 rounded-full cursor-pointer ${
+              index === currentIndex ? "bg-yellow-500" : "bg-gray-400"
             }`}
-          />
+          ></span>
         ))}
       </div>
     </div>
   );
 };
 
-export default RoomCarousel;
+export default Carousel;
