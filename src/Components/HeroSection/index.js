@@ -16,8 +16,8 @@ const HeroSection = () => {
       </div>
 
       
-       <div className="relative z-10 flex items-center justify-start h-full">
-        <div className=" bg-opacity-90 py-4 px-20 md:p-12 rounded-lg shadow-lg max-w-md ">
+       <div className="relative z-10 flex items-center justify-start  h-full">
+        <div className=" bg-opacity-90 py-4 px-20 sm:px-5 md:p-12 rounded-lg  shadow-lg max-w-md ">
           <p className="text-md uppercase font-semibold text-gray-600 mb-2">New Arrival</p>
           <h1 className="text-5xl md:text-5xl font-bold text-white mb-4">
             Discover Our <br /> New Collection

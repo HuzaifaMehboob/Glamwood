@@ -17,6 +17,7 @@ import potty from '../../Assets/Images/productsection/potty.png'
 import WhyChooseUs from "../../Components/WhyChooseUs";
 import FurnitureGallery from "../../Components/FurnitureGallery";
 import SignatureCollection from "../../Components/SignatureCollection";
+import Review from "../../Components/Reviews";
 
 
 const products = [
@@ -90,6 +91,7 @@ const Homepage = () => {
       <ProductSection products={products}/>
       <SignatureCollection/>
       <RoomInspirationSection />
+      <Review/>
       <GallerySection />
       <Footer />
     </div>
