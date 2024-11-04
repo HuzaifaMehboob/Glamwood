@@ -7,7 +7,7 @@ const Header = () => {
     <header className="flex items-center justify-between px-4 md:px-8 py-4 border-b border-gray-200 bg-white shadow-sm">
       {/* Left Section: Logo */}
       <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800">
-        Woodex
+        Glamwood
       </h1>
 
       {/* Right Section: Icons and Search Bar */}

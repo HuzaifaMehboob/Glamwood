@@ -26,7 +26,7 @@ const ReviewCard = ({review}) => {
   return (
     <div className="py-5 px-5 bg-gray-100 shadow-lg flex flex-col h-80 rounded-lg">
       <div className="py-2 flex items-center gap-3">
-        <div className="p-3 bg-gray-100 rounded-3xl">
+        <div className="p-3 bg-gray-200 rounded-3xl">
           <GoPersonFill size={25} />
         </div>
         <div>

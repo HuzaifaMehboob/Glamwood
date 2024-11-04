@@ -1,7 +1,13 @@
 // ProductCard.js
-import React from 'react';
+import React, { useState } from 'react';
+import { FaCartArrowDown } from "react-icons/fa6";
+import { IoShareSocialSharp } from "react-icons/io5";
+import { AiOutlineLike } from "react-icons/ai";
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
+  const [heart, setheart] = useState(false);
   return (
     <div className="relative bg-white rounded-lg shadow-md overflow-hidden">
       {/* Product Image */}
@@ -35,11 +41,11 @@ const ProductCard = ({ product }) => {
 
       {/* Hover Overlay with Actions */}
       <div className="absolute inset-0 bg-black bg-opacity-25 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-        <button className="bg-yellow-500 text-white px-4 py-2 rounded">Add to cart</button>
         <div className="flex items-center space-x-4 ml-4 text-white">
-          <button>Share</button>
-          <button>Compare</button>
-          <button>Like</button>
+          <button className="hover:bg-gray-100 hover:text-black text-white p-3 rounded"><FaCartArrowDown size={20}/></button>
+          <button className="hover:bg-gray-100 hover:text-black text-white p-3 rounded"><IoShareSocialSharp size={20}/></button>
+          <button className="hover:bg-gray-100 hover:text-black text-white p-3 rounded" onClick={()=>setheart(true)}>{heart ? <FaHeart size={20} /> : <FaRegHeart size={20}/> }</button>
+         
         </div>
       </div>
     </div>
