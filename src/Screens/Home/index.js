@@ -83,7 +83,6 @@ const products = [
 const Homepage = () => {
   return (
     <div className="font-sans">
-      <Navbar />
       <HeroSection />
       <WhyChooseUs/>
       {/* <FurnitureGallery/> */}

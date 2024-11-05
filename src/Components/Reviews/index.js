@@ -43,8 +43,8 @@ const ReviewCard = ({review}) => {
 
 const Review = () => {
   return (
-    <div className="py-12 px-32 text-center ">
-      <h2 className="text-4xl font-bold mb-8">Reviews</h2>
+    <div className="py-12 px-32 xs:px-16 xs:py-8 sm:px-8 md:px-52 text-center ">
+      <h2 className="text-4xl font-bold mb-8 md:mb-10">Reviews</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {reviews.map((review)=>(
             <ReviewCard key={review.id}

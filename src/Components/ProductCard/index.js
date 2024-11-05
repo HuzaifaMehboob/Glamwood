@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="relative bg-white rounded-lg shadow-md overflow-hidden">
       {/* Product Image */}
-      <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
+      <img src={product.image} alt={product.name} className="w-full xs:h-32 h-48 object-cover" />
 
       {/* New or Discount Badge */}
       {product.isNew && (
@@ -26,11 +26,11 @@ const ProductCard = ({ product }) => {
       )}
 
       {/* Product Info */}
-      <div className="p-4">
+      <div className="py-4 px-4 xs:px-4 xs:py-2">
         <h3 className="text-lg font-semibold">{product.name}</h3>
         <p className="text-gray-500 text-sm">{product.description}</p>
         <div className="flex items-center mt-2">
-          <span className="text-lg font-bold text-gray-900">{product.price}</span>
+          <span className="text-lg xs:text-base font-bold text-gray-900">{product.price}</span>
           {product.originalPrice && (
             <span className="text-sm text-gray-400 line-through ml-2">
               {product.originalPrice}
