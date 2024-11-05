@@ -9,7 +9,7 @@ const ProductSection = ({ products }) => {
       <h2 className="text-4xl font-semibold">Our Products</h2>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-2 xs:px-2 sm:px-2 md:px-2 xs:bg-black mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-2 xs:px-2 sm:px-2 md:px-2  mt-8">
         {products.map((product, index) => (
           <ProductCard key={index} product={product} />
         ))}
