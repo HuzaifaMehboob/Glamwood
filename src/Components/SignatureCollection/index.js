@@ -47,7 +47,7 @@ const SignatureCollection = () => {
           <div className="w-full md:w-1/2 flex flex-col justify-center space-y-8">
             <h3 className="text-5xl font-bold text-gray-800">Elegant Minimalism Collection</h3>
             <p className="text-gray-500 leading-loose text-lg">
-            Embrace the beauty of simplicity with our Elegant Minimalism Collection. Featuring refined furniture pieces like this plush mauve accent chair, complemented by a chic marble side table and a brass floor lamp, each element is designed to bring a touch of luxury to your space. Perfect for those who appreciate understated elegance, this collection merges comfort with style, making it ideal for modern and minimalist interiors. Let your space speak sophistication with thoughtfully curated pieces that elevate any room.</p>
+            Embrace the beauty of simplicity with our Elegant Minimalism Collection. Featuring refined furniture pieces like this plush mauve accent chair, complemented by a chic marble side table and a brass floor lamp, each element is designed to bring a touch of luxury to your space.</p>
             <button className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 mt-4 w-fit">
               Explore Now
             </button>

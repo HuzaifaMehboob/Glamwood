@@ -6,9 +6,9 @@ import Navbar from './Components/Navbar'
 
 export default function App() {
   return (
-    <div className="w-[100%] h-[100%] p-0 m-0 box-border">
-        <Navbar/>
+    <div className="w-full h-full p-0 m-0 box-border">
         <Router>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop/>} /> 

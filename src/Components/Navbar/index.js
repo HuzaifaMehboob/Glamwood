@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { FaUser, FaHeart, FaShoppingBag, FaBars, FaTimes } from 'react-icons/fa';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate()
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -11,14 +13,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between px-4 md:px-8 py-4 border-b border-gray-200 bg-white shadow-sm">
+      <header className="flex items-center justify-between px-4 md:pl-12 py-4 border-b border-gray-200 bg-white shadow-sm ">
         {/* Left Section: Logo */}
-        <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800">
+        <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800 cursor-pointer"
+        onClick={()=>navigate('/')}>
           Glamwood
         </h1>
 
         {/* Right Section: Icons and Search Bar */}
-        <div className="flex items-center space-x-4 md:space-x-6 text-gray-600">
+        <div className="flex items-center space-x-10 md:space-x-8  text-gray-600">
           {/* Search Icon for Small Screens */}
           <button className="text-gray-500 block md:hidden">
             <AiOutlineSearch className="text-xl" />
@@ -40,11 +43,11 @@ const Header = () => {
           <FaUser className="hidden sm:block cursor-pointer text-lg md:text-xl hover:text-gray-800" />
           <div className="relative cursor-pointer text-lg md:text-xl hover:text-gray-800">
             <FaHeart />
-            <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 text-xs font-semibold text-white bg-brown-600 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">0</span>
+            <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 text-xs font-semibold text-white bg-red-600 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">0</span>
           </div>
           <div className="relative cursor-pointer text-lg md:text-xl hover:text-gray-800">
             <FaShoppingBag />
-            <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 text-xs font-semibold text-white bg-brown-600 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">0</span>
+            <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 text-xs font-semibold text-white bg-red-600 rounded-full flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">0</span>
           </div>
           <FaBars onClick={toggleDropdown} className="cursor-pointer text-lg md:text-xl hover:text-gray-800" />
         </div>

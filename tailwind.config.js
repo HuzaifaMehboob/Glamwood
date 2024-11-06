@@ -14,8 +14,8 @@ module.exports = {
       },
     },
     screens: {
-      xs: { max: '479px' }, // Styles apply only up to 479px
-      sm: '640px',           // Minimum width 640px
+      xs: { max: '479px' }, 
+      sm: '640px',          
       md: '768px',
       lg: '1024px',
       xl: '1280px',

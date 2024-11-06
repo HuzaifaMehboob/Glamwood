@@ -4,7 +4,7 @@ const RoomInspirationSection = () => {
     
 
   return (
-    <div className="flex flex-col lg:flex-row items-center bg-gray-100 py-12 px-6 lg:px-20">
+    <div className="flex flex-col lg:flex-row items-center bg-gray-100 w-full box-border py-12 px-6 lg:px-20">
       {/* Text Section */}
       <div className="lg:w-1/3 mb-8 lg:mb-0">
         <h2 className="text-5xl font-semibold mb-4">50+<br/>Beautiful Rooms Inspiration</h2>

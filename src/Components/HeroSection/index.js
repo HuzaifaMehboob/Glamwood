@@ -1,9 +1,11 @@
 import React from "react";
 import hero from '../../Assets/Images/hero/bg_hero.jpg';
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate()
   return (
-    <section className="relative w-screen h-[70vh] md:h-[90vh] bg-gray-50">
+    <section className="relative w-screen h-[70vh] md:h-[90vh] bg-gray-50 box-border">
       
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -25,7 +27,8 @@ const HeroSection = () => {
           <p className="text-white mb-6 text-sm xs:mr-20">
             Discover our new collection — where timeless elegance meets modern design. Crafted with care and inspired by comfort, each piece brings warmth and sophistication to your home.
           </p>
-          <button className="text-white border-white border-2 px-6 py-2 xs:px-3 rounded-md font-semibold hover:bg-gray-700 transition duration-200">
+          <button className="text-white border-white border-2 px-6 py-2 xs:px-3 rounded-md font-semibold hover:bg-gray-700 transition duration-200"
+          onClick={()=>navigate('/shop')}>
             Buy Now
           </button>
         </div>
